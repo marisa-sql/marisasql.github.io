@@ -3,62 +3,90 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MarisaBoard</title>
-
-  <!-- Correct stylesheet link -->
-  <link rel="stylesheet" href="style.css">
+  <title>/log/ — catalog</title>
+  ./style.css
 </head>
 
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="/">MarisaBoard</a>
-
+      ./index.html/log/</a>
       <nav class="nav">
-        <a href="#sec">sec</a>
-        <a href="#dev">dev</a>
-        <a href="#ops">ops</a>
-        <a href="#subscribe">Subscribe</a>
+        <span class="muted">private imageboard-style blog</span>
+        <span class="sep">|</span>
+        <span class="muted">OP only</span>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
+    <div class="boardbar" aria-label="Boards">
+      <span class="current">/all/</span>
+      ./sec.html/sec/</a>
+      ./dev.html/dev/</a>
+      ./ops.html/ops/</a>
+    </div>
+
     <section class="hero">
-      <p class="kicker">EDITORIAL IMAGEBOARD • TECH • SECURITY</p>
-      <h1>Threads, but make it a publication.</h1>
-      <p class="lede">Longform OP posts + fast replies + a clean catalog. Dark, chunky, modern.</p>
+      <p class="kicker">OP posts only • no replies • no accounts</p>
+      <h1>Catalog — All</h1>
+      <p class="lede">Click a thread to read the OP (full post).</p>
+    </section>
 
-      <div class="subscribe" id="subscribe">
-        <div>
-          <strong>Get the dispatch</strong>
-          <p>One email when something is worth reading. No spam.</p>
+    <section class="catalog" aria-label="Thread catalog">
+      ./thread-001.html
+        <div class="thumb"><img src="./assets/001.jpg" alt="iv class="card-body">
+          <div class="meta">
+            <span class="board">/sec/</span>
+            <span>No.001</span>
+            <span>Feb 3, 2026</span>
+          </div>
+          <h3>Ransomware imaging: what I’d do differently next time</h3>
+          <p>Hashing, chain of custody, and the few steps that actually mattered.</p>
         </div>
-        <a class="btn btn-accent" href="#subscribe">Subscribe</a>
-      </div>
+      </a>
+
+      ./thread-002.html
+        <div class="thumb"><img src="./assets/002.jpg" alt="thumb 002"card-body">
+          <div class="meta">
+            <span class="board">/dev/</span>
+            <span>No.002</span>
+            <span>Feb 2, 2026</span>
+          </div>
+          <h3>Building this private imageboard-style blog (no JS)</h3>
+          <p>Static pages, board navigation, and a repeatable post template.</p>
+        </div>
+      </a>
+
+      <a class="card" href="./thread class="thumb">./assets/003.jpg</div>
+        <div class="card-body">
+          <div class="meta">
+            <span class="board">/ops/</span>
+            <span>No.003</span>
+            <span>Feb 1, 2026</span>
+          </div>
+          <h3>Homelab notes: what stayed, what got cut</h3>
+          <p>A boringly stable setup beats a “cool” one that breaks weekly.</p>
+        </div>
+      </a>
+
+      ./thread-004.html
+        <div class="thumb">./assets/004.jpg</div>
+        <div class="card-body">
+          <div class="meta">
+            <span class="board">/sec/</span>
+            <span>No.004</span>
+            <span>Jan 12, 2026</span>
+          </div>
+          <h3>CTF writeup format I actually stick to</h3>
+          <p>A simple template: goal → attempts → evidence → takeaway.</p>
+        </div>
+      </a>
     </section>
 
-    <section class="controls">
-      <div class="tabs" role="tablist" aria-label="Catalog sorting">
-        <button class="tab is-active" data-sort="bumped">Bumped</button>
-        <button class="tab" data-sort="latest">Latest</button>
-        <button class="tab" data-sort="pinned">Pinned</button>
-      </div>
-
-      <div class="search">
-        <input id="q" type="search" placeholder="Search threads…" />
-      </div>
-    </section>
-
-    <section class="catalog" id="catalog">
-      <!-- JS injects thread cards -->
-      <noscript>
-        <p>Please enable JavaScript to view the catalog.</p>
-      </noscript>
-    </section>
+    <footer class="footer">
+      <span class="muted">Add posts by creating new <code>thread-###.html</code> pages and linking them in the catalog.</span>
+    </footer>
   </main>
-
-  <!-- Correct script tag -->
-  <script src="app.js"></script>
 </body>
 </html>
