@@ -131,17 +131,21 @@ code{
   padding: 10px 0 20px;
   display: grid;
   gap: 10px;
+  grid-template-columns: 1fr; /* mobile default */
 }
 
 @media (min-width: 980px){
-  .catalog{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .catalog{
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 tiles */
+  }
 }
+
 @media (min-width: 620px) and (max-width: 979px){
-  .catalog{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .catalog{
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* tablet */
+  }
 }
-@media (max-width: 619px){
-  .catalog{ grid-template-columns: 1fr; }
-}
+``
 
 /* thread tile */
 .card{
